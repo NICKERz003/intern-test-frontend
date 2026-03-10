@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fdf9f3;
+  font-family: sans-serif;
+}
+
+/* Container หลัก */
+.app-container {
+  padding: 60px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header-section {
+  margin-bottom: 40px;
+  border-left: 5px solid #e11d48;
+  padding-left: 20px;
+}
+
+.header-recommended {
+  color: #e11d48;
+  font-size: 3rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.header-recipes {
+  color: #e11d48;
+  font-size: 4rem;
+  font-family: serif;
+  font-style: italic;
+  margin-top: -10px;
+}
+
+/*  CSS Grid เรียงการ์ด  */
+.recipe-grid {
+  display: grid;
+  /* ค่าเริ่มต้น สำหรับมือถือ : 1 คอลัมน์ */
+  grid-template-columns: repeat(1, 1fr);
+  gap: 24px;
+}
+
+/* จอ Tablet 640px ขึ้นไป: 2 คอลัมน์ */
+@media (min-width: 640px) {
+  .recipe-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* จอ Laptop 1024px ขึ้นไป: 4 คอลัมน์ */
+@media (min-width: 1024px) {
+  .recipe-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* จอใหญ่ 1280px ขึ้นไป: 6 คอลัมน์  */
+@media (min-width: 1280px) {
+  .recipe-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
